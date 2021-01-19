@@ -1,28 +1,37 @@
 <?php
 class Menu{
-    public $rawon  ;
-    public $soto ;
-   public $nasicampur;
+public $Food = Array (
+"soto => 20.000", 
+"rawon => 13.000", 
+"nasicampur => 20.000");  
 
-function getRawon(){
-   return $this->rawon;
+public $FoodMenu;
+
+public function __construct($FoodMenu){
+   $this->FoodMenu = $FoodMenu;
 }
-function setRawon($rawon){
-   $this->rawon = 13.000;
-}
-function getSoto(){
-   return $this->soto;
-}
-function setSoto($soto){
-   $this->soto = 20.000;
-}
-function getNasicampur($nasicampur){
-  return $this->nasicampur;
-}
-function setNasicampur($nasicampur){
-   $this->nasicampur= 20.000;
+public function run(){
+   if ($this->FoodMenu == $this->Food){
+      echo "Food Menu";
+      echo "<br/>"; 
+   echo  $this->Food[0];
+   echo "<br/>";
+   echo $this->Food[1];
+   echo "<br/>";
+   echo $this->Food[2];
+   }
 }
 }
+
+$FoodMenu = Array (
+   "soto => 20.000", 
+   "rawon => 13.000", 
+   "nasicampur => 20.000"); ;
+$Menu = new menu ($FoodMenu);
+$Menu->run();
 ?>
+
+
+
 
 
