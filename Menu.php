@@ -5,19 +5,17 @@ public $Food = Array (
 "rawon => 13.000", 
 "nasicampur => 20.000");  
 
-public $FoodMenu;
-
-public function __construct($FoodMenu){
-   $this->FoodMenu = $FoodMenu;
+public function __construct($Food){
+   $this->Food= $Food;
 }
 public function run(){
-   if ($this->FoodMenu == $this->Food){
-       echo "Food Menu" ."\n";
-   echo "\n" . $this->FoodMenu[0] . "\n" . $this->FoodMenu[1].  "\n" .$this->FoodMenu[2]. "\n";
+   echo "Food Menu" ."\n";
+   foreach ($this->Food as $food){
+   echo "\n" . $food;
+
    }
 }
 }
-
 $FoodMenu = Array (
    "soto => 20.000", 
    "rawon => 13.000", 
