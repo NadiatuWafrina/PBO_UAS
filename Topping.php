@@ -9,11 +9,13 @@ public function __construct($Toping1, $Toping2){
     $this->Toping2 = $Toping2;
 }
 public function go(){
+   echo "\n" . "Toping 1 Price". "\n";
    foreach ($this->Toping1 as $A){
-       echo $A;
+       echo "\n" .$A. "\n";
    }
+   echo "\n" ."Toping 2 Price". "\n";
    foreach ($this->Toping2 as $B){
-    echo $B;
+    echo "\n".  $B . "\n";
 }
    }
 }
