@@ -12,21 +12,13 @@ public function __construct($FoodMenu){
 }
 public function run(){
    if ($this->FoodMenu == $this->Food){
-      echo "Food Menu";
-      echo "<br/>"; 
-   echo  $this->Food[0];
-   echo "<br/>";
-   echo $this->Food[1];
-   echo "<br/>";
-   echo $this->Food[2];
+      echo "Food Menu" ."\n";
+   echo "\n" . $this->FoodMenu[0] . "\n" . $this->FoodMenu[1].  "\n" .$this->FoodMenu[2]. "\n";
+
    }
 }
 }
 
-$FoodMenu = Array (
-   "soto => 20.000", 
-   "rawon => 13.000", 
-   "nasicampur => 20.000"); ;
 $Menu = new menu ($FoodMenu);
 $Menu->run();
 ?>

@@ -1,33 +1,32 @@
 <?php
- class Topping{
-   public $Menu = Array ("soto" => 20.000, "rawon" => 13.000, "nasicampur" => 20.000);  
-   public $AToping = Array ("krupuk" => 500, "selada" => 50, "garam" => 3, "gula" => 1);
-   public $BToping = Array ("AyamSuwir" => 3000, "Dagingpotongkecil" => 1000) ;
-   public $bill;
+class Topping{
+public $Toping1 = Array ("krupuk=> 500", "selada => 50", "garam => 3", "gula => 1");
+public $Toping2 = Array ("AyamSuwir => 3000", "Dagingpotongkecil => 1000") ;
+public $A;
+public $B;
 
-   public function __construct($Menu , $AToping , $BToping)
-   {
-      $this->Menu = $Menu;
-      $this->AToping = $AToping; 
-      $this->BToping = $BToping;
+
+public function __construct($A, $B){
+   $this->A = $A;
+   $this->B = $B;
+}
+public function go(){
+   if ($this->A == $this->Toping1 AND $this->B == $this->Toping2){
+      echo "Food Menu" . "<\n> ";
+      echo  "<\n> ". "Toping Ringan Price" .  "<\n> "; 
+   echo "<\n> ". $this->A[0] . "<\n> " .  $this->A[1]. "<\n> " . $this->A[2]. "<\n> ". $this->A[3] ."<\n> ";
+   echo "<\n> " ."Toping Sedang Price " . "<\n> "; 
+   echo  $this->B[0]. "<\n> ". $this->B[1] ;
    }
-   public function ulang(){
-   foreach ($this->Menu as $pricetag) {
+   }
 }
-    foreach ($this->AToping as $Aprice) {
-
-}foreach ($this->BToping as $Bprice) {
-
-}
-if ($this->Menu['nasicampur'] && $this->AToping && $this->BToping){
-    $bill = (($pricetag) + ($Aprice) + ($Bprice));
-    echo $bill;
-}
-
-//if ($this->Menu['rawon'] OR $this->Menu['soto'] && ($AAA * $this->AToping) && ($BBBB * $this->BToping){
-   // $bill = (($pricetag) + ($AAA * $APrice) + ($BBBB * $BPrice));
-   // echo $bill;
-//}
- }
-}
+$A = Array ("krupuk=> 500", "selada => 50", "garam => 3", "gula => 1");
+$B = Array ("AyamSuwir => 3000", "Dagingpotongkecil => 1000") ;
+$Topping = new topping ($A, $B);
+$Topping->go();
 ?>
+
+
+
+
+
